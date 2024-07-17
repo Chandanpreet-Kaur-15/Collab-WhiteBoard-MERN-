@@ -5,7 +5,7 @@ function App() {
 
   return (
     <>
-      <div>White Board</div>
+      <div className='bg-yellow-300'>White Board app</div>
     </>
   )
 }
