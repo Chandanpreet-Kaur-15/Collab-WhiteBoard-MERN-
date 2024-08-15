@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 });
 
 io.on("Connection: ", (socket) => {
-    vonsole.log("User Connected");
+    console.log("User Connected");
 });
 
 const port = process.env.PORT || 5000;
