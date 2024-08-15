@@ -1,13 +1,19 @@
 const express = require("express");
 const app = express();
 
-const http = require("http").createServer(app);
-const server = require("socket.io")(http);
+const server = require("http").createServer(app);
+const {Server} = require("socket.io");
+
+const io = new Server(server);
 
 
-
+// Routes
 app.get("/", (req, res) => {
     res.send("This is a realtime whiteboard sharing web application");
+});
+
+io.on("Connection: ", (socket) => {
+    console.log("User Connected");
 });
 
 
